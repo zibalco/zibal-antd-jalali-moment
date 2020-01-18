@@ -1,0 +1,88 @@
+{
+  "_from": "antd-jalali-moment",
+  "_id": "antd-jalali-moment@3.3.2",
+  "_inBundle": false,
+  "_integrity": "sha512-WOjTjAoLw45he6Zan2B2c8WscUgyN21LxCsUOTg4s4ltY7ZjeyjPf2GSiY5tCwsbRHW6b6qzekoh6RnJr1ntbQ==",
+  "_location": "/antd-jalali-moment",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "antd-jalali-moment",
+    "name": "antd-jalali-moment",
+    "escapedName": "antd-jalali-moment",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/antd-jalali-moment/-/antd-jalali-moment-3.3.2.tgz",
+  "_shasum": "85c9828843c4ae7e5bf06423e2a3a49a20363bb9",
+  "_spec": "antd-jalali-moment",
+  "_where": "/home/sajjad/Work/zibal/zibal-react-panel",
+  "author": {
+    "name": "Vahid Alizad",
+    "email": "azizalizad@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/vahidalizad/ant-design-jalali/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2",
+    "moment": "^2.23.0"
+  },
+  "deprecated": false,
+  "description": "Support for jalali dates and time for ant-design(antd)",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codacy-coverage": "^3.4.0",
+    "eslint": "^5.13.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "homepage": "https://github.com/vahidalizad/ant-design-jalali",
+  "keywords": [
+    "ant-design",
+    "antd",
+    "manipulate",
+    "validate",
+    "jalali",
+    "convert",
+    "miladi",
+    "shamsi",
+    "typescript",
+    "javascript",
+    "persian",
+    "khorshidi",
+    "date",
+    "time",
+    "calendar"
+  ],
+  "license": "MIT",
+  "main": "antd-jalali-moment.js",
+  "name": "antd-jalali-moment",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vahidalizad/ant-design-jalali.git"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.browser.js",
+    "dev": "webpack --progress --colors --watch",
+    "lint": "eslint antd-jalali-moment.js && eslint test.js",
+    "postPublish": "npm publish pkg;rm -rf pkg",
+    "publish2": "mkdir -p pkg;cp -r ./* ./pkg; cp npmdoc.md ./pkg/README.md; cd ./pkg;npm run build",
+    "report-coverage": "export CODACY_PROJECT_TOKEN=7f46b99d0c1e4e0e9f176d98d70f972c; istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && rm -rf ./coverage",
+    "test": "mocha --reporter spec --ui bdd --colors --check-leaks  test.js"
+  },
+  "typings": "./antd-jalali-moment.d.ts",
+  "version": "3.3.2"
+}
